@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
 
     <title>Prova Técnica - DOT</title>
   </head>
@@ -16,16 +15,18 @@
       <div class="full-content">
         
         <div class="left-content">
-          <img src="assets/img-logo.png" alt="Imagem da logo (auréola)">
-          
-          <h1>LOREM IPSUM</h1>
+          <div class="div-left-content">
+            <img class="img-logo" src="assets/img-logo.png" alt="Imagem da logo (auréola)">
+            
+            <h1>LOREM IPSUM</h1>
+          </div>
         </div>
 
         <div class="right-content">
           <div class="div-border-left">
             <h2>LOREM IPSUM DOLOR SIT AMET</h2>
 
-            <h3>DOLOR SIT AMET</h3>
+            <h3 class="h3-white">DOLOR SIT AMET</h3>
 
             <h1>LOREM IPSUM</h1>
 
@@ -39,9 +40,9 @@
               tempor incididunt ut labore et dolore magna aliqua.
             </p>
 
-            <button class="main-button">CONTATO</button>
+            <button class="main-button" onclick="location.href='#section-4'">CONTATO</button>
 
-            <h3>LOREM IPSUM DOLOR SIT AMET</h3>
+            <h3 class="h3-normal">LOREM IPSUM DOLOR SIT AMET</h3>
           </div>
         </div>
 
@@ -104,14 +105,68 @@
     </section>
 
     <section class="section-3 diagonal diagonal-2">
-      
+      <img class="img-clouds img-cloud" src="assets/img-cloud.png">
+      <img class="img-clouds img-cloud-2" src="assets/img-cloud.png">
+      <img class="img-clouds img-cloud-right" src="assets/img-cloud-right.png">
+      <img class="img-clouds img-cloud-left" src="assets/img-cloud-left.png">
+      <div class="div-accordion">
+        <button class="accordion">Lorem ipsum</button>
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          </p>
+          <p>
+            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          </p>
+          <p>  
+            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+          </p>
+        </div>
+
+        <button class="accordion">Lorem ipsum</button>
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          </p>
+          <p>
+            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          </p>
+          <p>  
+            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+          </p>
+        </div>
+
+        <button class="accordion active">Lorem ipsum</button>
+        <div class="panel show">
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          </p>
+          <p>
+            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          </p>
+          <p>  
+            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+          </p>
+        </div>
+
+      </div>
     </section>
 
-    <section class="section-4">
-      
+    <section class="section-4" id="section-4">
+      <form>
+        <div class="div-form">
+          <input type="text" placeholder="Nome*" name="name" data-msg="Este campo é obrigatório." required>
+          <input type="text" placeholder="E-mail*" id="email" name="email" data-msg="Este campo é obrigatório." required>
+          <input type="text" id="phone" placeholder="Telefone" name="phone">
+          <textarea rows="6" cols="50" placeholder="Mensagem*" name="message" data-msg="Este campo é obrigatório." required></textarea>
+          <button type="submit" class="main-button submit-button">ENVIAR</button>
+        </div>
+      </form>
     </section>
 
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
     <script src="owlcarousel/owl.carousel.min.js"></script>
     <script src="js/script.js"></script>
   </body>

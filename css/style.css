@@ -2,10 +2,13 @@
 
 :root{
     --color-orange: #FEB452;
-    --color-white: #FFF; 
+    --color-white: #FFF;
+    --color-font-white: #FBF1EA; 
     --color-green: #0D6358;
     --color-light-green: #15A996;
     --color-gray: #F3F0EA;
+    --color-red: #FF4949; 
+    --color-font-button: #034030;
 }
 
 html, body{
@@ -21,6 +24,10 @@ section{
 	padding: 20px 0px 20px 0px;
 }
 
+h1{
+	font-size: 36px;
+}
+
 .section-1{
 	background-image: url("../assets/img-background.jpeg");
 	background-size: cover;
@@ -31,11 +38,19 @@ section{
 
 .section-1 h1, .section-1 h2, .section-1 h3{
 	color: var(--color-orange);
-	letter-spacing: 1px;
 }
 
-.section-1 p{
+.section-1 .h3-white, .section-1 p{
 	color: var(--color-white);
+	font-weight: 300;
+}
+
+.section-1 .h3-normal{
+	font-weight: 400;
+}
+
+.img-logo{
+	max-width: 230px;
 }
 
 .full-content{
@@ -43,12 +58,13 @@ section{
 }
 
 .left-content{
-	flex: 1;
+	flex: 4;
 	text-align: center;
+	position: relative;
 }
 
 .right-content{
-	flex: 1;
+	flex: 6;
 }
 
 .div-border-left{
@@ -58,10 +74,13 @@ section{
 
 .main-button{
 	background-color: var(--color-orange);
-	padding: 5px 20px 5px 20px;
+	padding: 10px 35px 10px 35px;
 	border-radius: 25px;
 	border-color: transparent;
 	font-size: 14px;
+	font-weight: 700;
+	color: var(--color-font-button);
+	cursor: pointer;
 }
 
 .section-2{
@@ -89,12 +108,6 @@ section{
 	padding-right: 10px;
 }
 
-.section-3{
-	position: relative;
-	background-color: orange;
-	height: 100px;
-}
-
 .section-1:before, .section-2:before, .section-3:before{
     position: absolute;
     content:'';
@@ -108,7 +121,7 @@ section{
 .diagonal-1:before{
 	transform: rotate(2deg);
 	top: 0;
-	left: -2%;
+	left: -4%;
 	z-index: -1;
 	width: 210%;
 	height: 75%;
@@ -174,15 +187,154 @@ section{
 	border: 1px solid var(--color-orange);
 }
 
+.section-3{
+	position: relative;
+	background-color: orange;
+}
+
+.img-clouds{
+	position: absolute;
+	z-index: -1;
+}
+
+.img-cloud{
+	top: 10%;
+	right: 10%;
+}
+
+.img-cloud-2{
+	bottom: 20%;
+	left: 10%;
+}
+
+.img-cloud-right{
+	bottom: 30%;
+	right: 0;
+}
+
+.img-cloud-left{
+	top: 30%;
+	left: 0;
+}
+
+.div-accordion{
+	margin: 30px 25% 30px 25%;
+}
+
+.accordion{
+    background-color: var(--color-green);
+    color: var(--color-font-white);
+    cursor: pointer;
+    padding: 18px;
+    margin: 5px 0px 0px 0px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.div-accordion .active, .accordion:hover{
+    background-color: var(--color-light-green);
+}
+
+.accordion:after {
+    content: "\2228";
+    color: var(--color-font-white);
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.div-accordion .active:after{
+    content: "\2227";
+}
+
+.panel{
+	max-height: 0;
+    padding: 0 18px;
+    background-color: var(--color-gray);
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.panel.show{
+    max-height: 600px;
+}
+
+.section-4{
+	background-color: var(--color-green);
+}
+
+.div-form{
+	margin: 0px 30% 30px 30%;
+}
+
+.div-form input, .div-form textarea{
+	width: 100%;
+	background-color: transparent;
+	color: var(--color-white);
+	border: none;
+	border-bottom: 1px solid var(--color-white);
+	font-family: 'Open Sans'; 
+	font-size: 14px;
+	padding: 30px 0px 5px 0px;
+	outline-style: none;
+	resize: none;
+}
+
+.div-form input::placeholder, .div-form textarea::placeholder{
+	color: var(--color-font-white);
+}
+
+.div-form .submit-button{
+	margin-top: 30px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+textarea.error, textarea.error::placeholder, input.error, input.error::placeholder, label.error {
+    color: var(--color-red);
+    border-color: var(--color-red);
+}
+
+@media (min-width: 992px){
+	.div-left-content{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
 @media (min-width: 768px) and (max-width: 991.98px){
 	.list ul{
 		columns: 3;
 	}
+
+	.div-left-content{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+	}
 }
 
 @media (max-width: 767.98px){
+	body{
+		text-align: center;
+	}	
+
 	.full-content{
 		flex-direction: column;
+	}
+
+	.div-border-left{
+		border: none;
 	}
 
 	.owl-dot{
@@ -195,5 +347,13 @@ section{
 
 	.list ul{
 		columns: 2;
+	}
+
+	.div-accordion{
+		margin: 30px 10% 30px 10%;
+	}
+
+	.div-form{
+		margin: 0px 10% 30px 10%;
 	}
 }
